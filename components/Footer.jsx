@@ -41,7 +41,7 @@ export default function Footer() {
 
       <div className="shell footer-bottom">
         <p>© 2026 Tota Cake House. All rights reserved.</p>
-        <p>Made with love, baked with happiness.</p>
+        <p className="footer-script-tagline">Made with love, baked with happiness.</p>
       </div>
     </footer>
   );

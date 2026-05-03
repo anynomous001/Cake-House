@@ -15,6 +15,7 @@
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
   --font-display: Georgia, "Times New Roman", serif;
   --font-body: Inter, "Avenir Next", "Segoe UI", sans-serif;
+  --font-script: cursive;
 }
 
 * {
@@ -287,17 +288,45 @@ img {
   margin: 0;
   color: var(--white);
   font-family: var(--font-display, Georgia, serif);
-  font-size: clamp(2.8rem, 7vw, 5.8rem);
-  line-height: 1.06;
   font-weight: 700;
   letter-spacing: -0.02em;
 }
 
+.hero-content h1 {
+  font-size: clamp(3.2rem, 8vw, 7rem);
+  line-height: 1.04;
+}
+
+.section-heading h2 {
+  font-size: clamp(2.4rem, 5.5vw, 4.8rem);
+  line-height: 1.08;
+  font-style: italic;
+}
+
+.cta-card h2 {
+  font-size: clamp(2.6rem, 6vw, 5rem);
+  line-height: 1.06;
+}
+
 .hero-content h1 span {
+  display: inline-block;
+  font-family: var(--font-script, cursive);
+  font-size: 1.08em;
+  font-weight: 700;
+  font-style: normal;
+  letter-spacing: 0.01em;
+  line-height: 1.15;
   color: transparent;
   background: linear-gradient(90deg, var(--rose), var(--accent-strong));
   -webkit-background-clip: text;
   background-clip: text;
+}
+
+.script-accent {
+  font-family: var(--font-script, cursive);
+  font-style: normal;
+  font-weight: 400;
+  letter-spacing: 0.01em;
 }
 
 .hero-content > p,
@@ -399,9 +428,7 @@ img {
   text-transform: uppercase;
 }
 
-.section-heading h2 {
-  font-size: clamp(2.2rem, 5vw, 4rem);
-}
+/* individual section-heading h2 size is set in the shared block above */
 
 .section-copy {
   max-width: 560px;
@@ -691,9 +718,9 @@ img {
 
 .story-copy h2 {
   margin: 12px 0 20px;
-  font-size: clamp(2rem, 4vw, 3.2rem);
+  font-size: clamp(2.2rem, 4.5vw, 3.8rem);
   line-height: 1.1;
-  letter-spacing: -0.02em;
+  font-style: italic;
 }
 
 .story-copy p + p {
@@ -1041,6 +1068,14 @@ img {
   border-top: 1px solid rgba(39, 39, 42, 0.8);
   color: #71717a;
   font-size: 0.82rem;
+}
+
+.footer-script-tagline {
+  font-family: var(--font-script, cursive);
+  font-size: 1.15rem;
+  font-style: normal;
+  color: var(--accent);
+  letter-spacing: 0.01em;
 }
 
 /* ─── Floating WhatsApp ─── */
