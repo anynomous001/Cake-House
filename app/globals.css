@@ -1,6 +1,7 @@
 :root {
   --bg: #09090b;
-  --bg-soft: #131316;
+  --bg-soft: #111114;
+  --bg-warm: #0d0b09;
   --panel: rgba(24, 24, 27, 0.78);
   --panel-solid: #17171b;
   --border: rgba(63, 63, 70, 0.72);
@@ -12,6 +13,8 @@
   --accent-soft: rgba(212, 146, 74, 0.12);
   --rose: #cb6f93;
   --shadow: 0 24px 60px rgba(0, 0, 0, 0.35);
+  --font-display: Georgia, "Times New Roman", serif;
+  --font-body: Inter, "Avenir Next", "Segoe UI", sans-serif;
 }
 
 * {
@@ -26,7 +29,7 @@ body {
   margin: 0;
   background: var(--bg);
   color: var(--text);
-  font-family: Inter, "Avenir Next", "Segoe UI", sans-serif;
+  font-family: var(--font-body, Inter, "Avenir Next", "Segoe UI", sans-serif);
   -webkit-font-smoothing: antialiased;
 }
 
@@ -51,6 +54,8 @@ img {
   height: auto;
 }
 
+/* ─── Layout ─── */
+
 .site-main {
   position: relative;
   z-index: 1;
@@ -60,6 +65,8 @@ img {
   width: min(1200px, calc(100% - 32px));
   margin: 0 auto;
 }
+
+/* ─── Header ─── */
 
 .site-header {
   position: fixed;
@@ -165,6 +172,65 @@ img {
   font-weight: 700;
 }
 
+/* Hamburger */
+
+.hamburger {
+  display: none;
+  width: 42px;
+  height: 42px;
+  place-items: center;
+  background: rgba(24, 24, 27, 0.7);
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  color: var(--white);
+  font-size: 1.1rem;
+  cursor: pointer;
+  flex-shrink: 0;
+  transition: background 0.2s ease;
+}
+
+.hamburger:hover {
+  background: rgba(39, 39, 42, 0.9);
+}
+
+/* Mobile nav */
+
+.mobile-nav {
+  display: flex;
+  flex-direction: column;
+  padding: 8px 0 16px;
+  border-top: 1px solid rgba(39, 39, 42, 0.7);
+  background: rgba(9, 9, 11, 0.97);
+  backdrop-filter: blur(16px);
+}
+
+.mobile-nav a {
+  padding: 14px 20px;
+  color: var(--muted);
+  font-size: 1rem;
+  font-weight: 600;
+  border-bottom: 1px solid rgba(39, 39, 42, 0.4);
+  transition: color 0.15s ease, background 0.15s ease;
+}
+
+.mobile-nav a:hover {
+  color: var(--white);
+  background: rgba(39, 39, 42, 0.4);
+}
+
+.mobile-nav-cta {
+  margin: 12px 20px 0;
+  padding: 14px 18px !important;
+  border: none !important;
+  border-radius: 6px !important;
+  background: linear-gradient(90deg, var(--rose), var(--accent)) !important;
+  color: var(--white) !important;
+  font-weight: 700 !important;
+  text-align: center;
+}
+
+/* ─── Hero ─── */
+
 .hero-section {
   position: relative;
   min-height: 100vh;
@@ -216,13 +282,15 @@ img {
 
 .hero-content h1,
 .section-heading h2,
+.story-copy h2,
 .cta-card h2 {
   margin: 0;
   color: var(--white);
+  font-family: var(--font-display, Georgia, serif);
   font-size: clamp(2.8rem, 7vw, 5.8rem);
-  line-height: 1.02;
+  line-height: 1.06;
   font-weight: 700;
-  letter-spacing: -0.06em;
+  letter-spacing: -0.02em;
 }
 
 .hero-content h1 span {
@@ -282,6 +350,8 @@ img {
   font-size: 0.9rem;
 }
 
+/* ─── Section base ─── */
+
 .signature-section,
 .menu-section,
 .special-section,
@@ -297,10 +367,15 @@ img {
 }
 
 .menu-section,
-.story-section,
 .gallery-section,
 .faq-section {
   border-top: 1px solid rgba(24, 24, 27, 0.9);
+}
+
+/* Warm-toned sections for visual alternation */
+.story-section,
+.delivery-section {
+  background: var(--bg-warm);
 }
 
 .section-heading {
@@ -337,6 +412,8 @@ img {
 .section-heading-center .section-copy {
   margin-inline: auto;
 }
+
+/* ─── Signature section ─── */
 
 .signature-rail {
   display: flex;
@@ -412,7 +489,7 @@ img {
 .process-card h3,
 .delivery-card h3,
 .story-copy h2,
-.faq-item summary {
+.faq-summary {
   margin: 0;
   color: var(--white);
 }
@@ -442,7 +519,7 @@ img {
 .testimonial-card p,
 .delivery-card p,
 .story-copy p,
-.faq-item p,
+.faq-body p,
 .footer-brand p,
 .footer-column span {
   color: var(--muted);
@@ -475,6 +552,8 @@ img {
   background: rgba(203, 111, 147, 0.88);
 }
 
+/* ─── Menu section ─── */
+
 .menu-filters {
   display: flex;
   flex-wrap: wrap;
@@ -492,6 +571,13 @@ img {
   color: var(--muted);
   font-size: 0.8rem;
   font-weight: 700;
+  cursor: pointer;
+  transition: background 0.15s ease, color 0.15s ease, border-color 0.15s ease;
+}
+
+.menu-filter:hover {
+  color: var(--white);
+  border-color: rgba(212, 146, 74, 0.5);
 }
 
 .menu-filter.is-active {
@@ -553,6 +639,8 @@ img {
   text-align: center;
 }
 
+/* ─── Special section ─── */
+
 .special-section {
   background:
     radial-gradient(circle at top center, rgba(212, 146, 74, 0.08), transparent 30%),
@@ -584,9 +672,15 @@ img {
   font-size: 1.8rem;
 }
 
-.special-card p {
-  margin-top: 14px;
+.special-card h3 {
+  margin-top: 18px;
 }
+
+.special-card p {
+  margin-top: 10px;
+}
+
+/* ─── Story section ─── */
 
 .story-layout {
   display: grid;
@@ -598,8 +692,8 @@ img {
 .story-copy h2 {
   margin: 12px 0 20px;
   font-size: clamp(2rem, 4vw, 3.2rem);
-  line-height: 1.08;
-  letter-spacing: -0.05em;
+  line-height: 1.1;
+  letter-spacing: -0.02em;
 }
 
 .story-copy p + p {
@@ -624,6 +718,8 @@ img {
   color: var(--muted);
   line-height: 2;
 }
+
+/* ─── Process section ─── */
 
 .process-section {
   border-top: 1px solid rgba(63, 63, 70, 0.35);
@@ -684,6 +780,12 @@ img {
   text-align: center;
 }
 
+/* ─── Testimonial section ─── */
+
+.testimonial-section {
+  background: var(--bg-soft);
+}
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -722,6 +824,8 @@ img {
   color: var(--muted);
   font-size: 0.82rem;
 }
+
+/* ─── Gallery section ─── */
 
 .gallery-grid {
   display: grid;
@@ -769,6 +873,8 @@ img {
   font-weight: 700;
 }
 
+/* ─── Delivery section ─── */
+
 .delivery-grid {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -786,51 +892,70 @@ img {
   font-size: 1.7rem;
 }
 
-.delivery-card p {
-  margin-top: 12px;
+.delivery-card h3 {
+  margin-top: 14px;
 }
+
+.delivery-card p {
+  margin-top: 8px;
+}
+
+/* ─── FAQ section ─── */
 
 .faq-list {
   display: grid;
   gap: 14px;
+  max-width: 860px;
+  margin: 0 auto;
 }
 
 .faq-item {
-  padding: 20px 22px;
   border: 1px solid var(--border);
   border-radius: 14px;
   background: rgba(19, 19, 22, 0.84);
+  overflow: hidden;
 }
 
-.faq-item summary {
-  cursor: pointer;
-  list-style: none;
-  position: relative;
-  padding-right: 28px;
+.faq-summary {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 22px;
+  background: none;
+  border: none;
+  color: var(--white);
   font-size: 1rem;
   font-weight: 700;
+  text-align: left;
+  cursor: pointer;
 }
 
-.faq-item summary::-webkit-details-marker {
-  display: none;
-}
-
-.faq-item summary::after {
-  content: "+";
-  position: absolute;
-  right: 0;
-  top: 0;
+.faq-icon {
+  flex-shrink: 0;
   color: var(--accent);
   font-size: 1.3rem;
+  line-height: 1;
 }
 
-.faq-item[open] summary::after {
-  content: "-";
+.faq-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.35s ease;
 }
 
-.faq-item p {
-  margin-top: 14px;
+.faq-item.is-open .faq-body {
+  max-height: 200px;
 }
+
+.faq-body p {
+  margin: 0;
+  padding: 0 22px 20px;
+  font-size: 0.96rem;
+}
+
+/* ─── CTA section ─── */
 
 .cta-card {
   padding: 54px 28px;
@@ -854,6 +979,8 @@ img {
   gap: 14px;
   margin-top: 30px;
 }
+
+/* ─── Footer ─── */
 
 .site-footer {
   padding: 80px 0 30px;
@@ -916,6 +1043,8 @@ img {
   font-size: 0.82rem;
 }
 
+/* ─── Floating WhatsApp ─── */
+
 .floating-wa {
   position: fixed;
   right: 18px;
@@ -926,13 +1055,22 @@ img {
   display: inline-flex;
   align-items: center;
   justify-content: center;
+  gap: 8px;
   border-radius: 999px;
   background: #25d366;
   color: #031b0d;
   font-size: 0.84rem;
   font-weight: 800;
   box-shadow: 0 16px 32px rgba(37, 211, 102, 0.22);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
+
+.floating-wa:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 20px 40px rgba(37, 211, 102, 0.3);
+}
+
+/* ─── Responsive ─── */
 
 @media (max-width: 1100px) {
   .menu-grid,
@@ -959,6 +1097,10 @@ img {
 @media (max-width: 860px) {
   .site-nav {
     display: none;
+  }
+
+  .hamburger {
+    display: grid;
   }
 
   .hero-meta,
@@ -996,12 +1138,6 @@ img {
 
   .hero-content {
     padding: 72px 0 56px;
-  }
-
-  .hero-content h1,
-  .section-heading h2,
-  .cta-card h2 {
-    line-height: 1.06;
   }
 
   .hero-meta,
