@@ -2155,6 +2155,15 @@ img {
     align-items: center;
   }
 
+  .signature-rail {
+    flex-direction: column;
+    overflow-x: hidden;
+  }
+
+  .signature-card {
+    min-width: 100%;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
