@@ -110,50 +110,48 @@ export const processSteps = [
     step: "01",
     title: "Browse Our Menu",
     copy: "Explore flavors and styles. Choose a preset cake or share a custom idea.",
-    icon: "📋"
+    icon: "📋",
+    bgImage: "/images/gallery-choco-party.png"
   },
   {
     step: "02",
     title: "Message on WhatsApp",
     copy: "Send your date, flavor, size, and design request. We reply quickly.",
-    icon: "💬"
+    icon: "💬",
+    bgImage: "/images/gallery-engagement.png"
   },
   {
     step: "03",
     title: "We Confirm & Price",
     copy: "Availability, pricing, and finishing details are confirmed before baking begins.",
-    icon: "✅"
+    icon: "✅",
+    bgImage: "/images/gallery-blue-birthday.png"
   },
   {
     step: "04",
     title: "Fresh Delivery",
     copy: "Your cake is prepared fresh for pickup or delivery around Maslandapur and Barasat.",
-    icon: "🚚"
+    icon: "🚚",
+    bgImage: "/images/gallery-loaded-choco.png"
   },
   {
     step: "05",
     title: "Celebrate",
     copy: "Enjoy the moment and share your celebration photos with us afterward.",
-    icon: "🎉"
+    icon: "🎉",
+    bgImage: "/images/gallery-floral.png"
   }
 ];
 
 export const testimonials = [
-  {
-    name: "Priya Sharma",
-    detail: "Chocolate 1 Pound Cake",
-    quote: "The cake looked beautiful and tasted fresh. It really made the birthday feel special."
-  },
-  {
-    name: "Rajesh Kumar",
-    detail: "Custom Birthday Cake",
-    quote: "The design came out close to our reference and the delivery timing was perfect."
-  },
-  {
-    name: "Meera Patel",
-    detail: "Butterscotch Celebration Cake",
-    quote: "Affordable, responsive, and consistently good. We have already ordered more than once."
-  }
+  { name: "Priya Sharma",  detail: "Chocolate 1 Pound Cake",         quote: "The cake looked beautiful and tasted fresh. It really made the birthday feel special." },
+  { name: "Rajesh Kumar",  detail: "Custom Birthday Cake",            quote: "The design came out close to our reference and the delivery timing was perfect." },
+  { name: "Meera Patel",   detail: "Butterscotch Celebration Cake",   quote: "Affordable, responsive, and consistently good. We have already ordered more than once." },
+  { name: "Arjun Bose",    detail: "Vanilla Cream Celebration Cake",  quote: "Ordered a surprise cake for my wife and it exceeded every expectation. Will order again." },
+  { name: "Sunita Das",    detail: "Eggless Black Forest Cake",       quote: "The eggless cake was so soft and moist — nobody believed it was eggless! Loved it." },
+  { name: "Kavya Nair",    detail: "Custom Photo Cake",               quote: "Quick replies on WhatsApp and the final cake looked exactly like the reference I sent." },
+  { name: "Rohit Ghosh",   detail: "Strawberry Birthday Cake",        quote: "Fresh, well-packaged, and absolutely delicious. The kids went crazy for it." },
+  { name: "Deepa Iyer",    detail: "Butterscotch Anniversary Cake",   quote: "Such a personal touch — they remembered our anniversary flavour from last year!" },
 ];
 
 export const galleryCards = [

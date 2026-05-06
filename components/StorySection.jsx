@@ -4,9 +4,9 @@ export default function StorySection() {
   return (
     <section className="story-section" id="about">
       <div className="shell story-layout">
-        <div className="story-copy">
+        <div data-anim="slide-left" className="story-copy">
           <p className="section-eyebrow">Our little cake house</p>
-          <h2>Fresh cakes, custom finishes, and a warm home-bakery touch.</h2>
+          <h2>Fresh cakes, custom finishes, and a <em>warm bakery voice</em>.</h2>
           <p>
             Tota Cake House is built around celebrations that feel personal. Every order is made fresh, shaped around
             your idea, and packed carefully so it reaches the moment looking beautiful.
@@ -17,7 +17,7 @@ export default function StorySection() {
           </p>
         </div>
 
-        <div className="story-aside">
+        <div data-anim="slide-right" className="story-aside">
           <div className="story-aside-card">
             <Image src="/images/logo.png" alt="Tota Cake House logo" width={220} height={220} />
             <ul>

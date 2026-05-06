@@ -8,18 +8,25 @@ export default function GallerySection() {
       <div className="shell">
         <SectionHeading
           eyebrow="Celebration gallery"
-          title="The visual vibe of Tota Cake House."
+          title={<>A Gallery of <em>Sweet Celebrations</em></>}
           copy="A mix of elegant floral cakes, playful birthday styles, and chocolate-heavy showstoppers."
         />
 
-        <div className="gallery-grid">
+        <div data-anim-stagger className="gallery-grid">
           {galleryCards.map((item) => (
-            <article key={item.title} className={`gallery-card ${item.className ?? ""}`}>
+            <a
+              key={item.title}
+              href="https://wa.me/916296990399"
+              target="_blank"
+              rel="noreferrer"
+              className={`gallery-card ${item.className ?? ""}`}
+            >
               <Image src={item.image} alt={item.title} width={800} height={960} className="gallery-card-image" />
               <div className="gallery-card-overlay">
-                <span>{item.title}</span>
+                <span className="gallery-card-title">{item.title}</span>
+                <span className="gallery-card-cta">Tap to order</span>
               </div>
-            </article>
+            </a>
           ))}
         </div>
       </div>

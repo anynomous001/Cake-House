@@ -2,9 +2,9 @@ export default function CTASection() {
   return (
     <section className="cta-section">
       <div className="shell">
-        <div className="cta-card">
+        <div data-anim="fade-up" className="cta-card">
           <p className="section-eyebrow">Ready to order</p>
-          <h2>Your perfect cake is one message away.</h2>
+          <h2>Your Perfect Cake Is <em>One Message Away</em>.</h2>
           <p>
             Join the families ordering from Tota Cake House for birthdays, anniversaries, baby showers, and sweet
             surprise gifting.

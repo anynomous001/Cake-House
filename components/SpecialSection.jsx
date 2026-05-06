@@ -7,14 +7,17 @@ export default function SpecialSection() {
       <div className="shell">
         <SectionHeading
           eyebrow="Why customers love us"
-          title="What makes Tota Cake House feel personal."
+          title={<>What Makes Us <em>Special</em></>}
           center
         />
 
-        <div className="special-grid">
-          {specialReasons.map((item) => (
+        <div data-anim-stagger className="special-grid">
+          {specialReasons.map((item, index) => (
             <article key={item.title} className="special-card">
-              <div className="special-icon">{item.icon}</div>
+              <span className="special-index">{String(index + 1).padStart(2, "0")}</span>
+              <div className="special-icon-wrap">
+                <div className="special-icon">{item.icon}</div>
+              </div>
               <h3>{item.title}</h3>
               <p>{item.copy}</p>
             </article>

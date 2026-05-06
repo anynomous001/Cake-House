@@ -1,15 +1,24 @@
 'use client';
 
-import { useState } from "react";
+import Image from "next/image";
+import { useState, useEffect } from "react";
 import { navLinks } from "../data/content";
 
 export default function Header() {
   const [mobileOpen, setMobileOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 60);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   return (
-    <header className="site-header">
+    <header className={`site-header${scrolled ? ' is-scrolled' : ''}`}>
       <div className="shell site-header-inner">
         <a href="#home" className="brand-lockup" onClick={() => setMobileOpen(false)}>
+          <Image src="/images/logo.png" alt="Tota Cake House logo" width={42} height={42} className="brand-logo" />
           <span className="brand-wordmark">Tota Cake House</span>
         </a>
 

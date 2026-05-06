@@ -14,7 +14,11 @@ export default function MenuSection() {
   return (
     <section className="menu-section" id="menu">
       <div className="shell">
-        <SectionHeading eyebrow="The menu" title="Choose a flavor, then build the celebration around it." center />
+        <SectionHeading
+          eyebrow="Fresh Homemade · Maslandapur"
+          title={<>Choose a <em>Flavor</em>, Build the Celebration</>}
+          center
+        />
 
         <div className="menu-filters">
           {menuFilters.map((item) => (
@@ -29,21 +33,25 @@ export default function MenuSection() {
           ))}
         </div>
 
-        <div className="menu-grid">
+        <div data-anim="fade-up" className="menu-grid">
           {filtered.map((item) => (
-            <article key={item.title} className="menu-item">
-              <div className="menu-item-thumb">
-                <Image src={item.image} alt={item.title} width={240} height={240} />
+            <article key={item.title} className="menu-card">
+              <div className="menu-card-side">
+                <div className="menu-card-media">
+                  <Image src={item.image} alt={item.title} width={280} height={280} className="menu-card-image" />
+                </div>
+                <span className="menu-card-price">{item.price}</span>
               </div>
-              <div className="menu-item-copy">
+              <div className="menu-card-copy">
                 <div className="menu-item-row">
                   <h3>{item.title}</h3>
-                  <span>{item.price}</span>
                 </div>
                 <p>{item.description}</p>
-                <a href="https://wa.me/916296990399" target="_blank" rel="noreferrer" className="menu-item-link">
-                  Add
-                </a>
+                <div className="menu-card-footer">
+                  <a href="https://wa.me/916296990399" target="_blank" rel="noreferrer" className="menu-card-link">
+                    Order on WhatsApp
+                  </a>
+                </div>
               </div>
             </article>
           ))}

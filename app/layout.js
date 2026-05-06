@@ -1,5 +1,6 @@
 import { Playfair_Display, Inter, Dancing_Script } from "next/font/google";
 import "./globals.css";
+import ScrollAnimator from "../components/ScrollAnimator";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -31,7 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en" className={`${playfair.variable} ${inter.variable} ${dancing.variable}`}>
-      <body>{children}</body>
+      <body><ScrollAnimator />{children}</body>
     </html>
   );
 }

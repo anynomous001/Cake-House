@@ -8,11 +8,11 @@ export default function SignatureSection() {
       <div className="shell">
         <SectionHeading
           eyebrow="Legendary signatures"
-          title="Celebration cakes that lead the order list."
-          copy="The styles customers ask for again and again, adapted for birthdays, gifting, and custom moments."
+          title={<>Our <em>Signature</em> Cakes</>}
+          copy="The cakes customers ask for first: expressive decoration, premium finishes, and that homemade warmth in every slice."
         />
 
-        <div className="signature-rail">
+        <div data-anim="fade-up" className="signature-rail">
           {featuredCakes.map((item) => (
             <article key={item.title} className="signature-card">
               <div className="signature-image-wrap">

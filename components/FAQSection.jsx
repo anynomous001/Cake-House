@@ -15,7 +15,7 @@ export default function FAQSection() {
     <section className="faq-section" id="faq">
       <div className="shell">
         <SectionHeading eyebrow="FAQ" title="Helpful answers before you place the order." center />
-        <div className="faq-list">
+        <div data-anim="fade-up" className="faq-list">
           {faqs.map((item, i) => (
             <div key={item.q} className={`faq-item${openIndex === i ? " is-open" : ""}`}>
               <button className="faq-summary" onClick={() => toggle(i)} aria-expanded={openIndex === i}>

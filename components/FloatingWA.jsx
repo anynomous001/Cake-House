@@ -9,8 +9,11 @@ function WhatsAppIcon() {
 export default function FloatingWA() {
   return (
     <a href="https://wa.me/916296990399" target="_blank" rel="noreferrer" className="floating-wa" aria-label="Order on WhatsApp">
-      <WhatsAppIcon />
-      Order
+      <span className="floating-wa-tooltip">Chat with us now</span>
+      <span className="floating-wa-icon">
+        <WhatsAppIcon />
+      </span>
+      <span className="floating-wa-label">WhatsApp</span>
     </a>
   );
 }
