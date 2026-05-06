@@ -61,11 +61,6 @@ export default function Hero() {
           </div>
         </div>
       </div>
-
-      <a href="#special" className="scroll-indicator" aria-label="Scroll down">
-        <span>Discover</span>
-        <span className="scroll-arrow">↓</span>
-      </a>
     </section>
   );
 }

@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Link from "next/link";
 import SectionHeading from "./SectionHeading";
 import { galleryCards } from "../data/content";
 
@@ -28,6 +29,12 @@ export default function GallerySection() {
               </div>
             </a>
           ))}
+        </div>
+
+        <div className="gallery-footer">
+          <Link href="/gallery" className="secondary-link gallery-see-more">
+            See More
+          </Link>
         </div>
       </div>
     </section>

@@ -1,7 +1,7 @@
 export default function Footer() {
   return (
     <footer className="site-footer">
-      <div data-anim="fade-up" className="shell footer-grid">
+      <div className="shell footer-grid">
         <div className="footer-brand">
           <h3>Tota Cake House</h3>
           <p>Fresh, homemade cakes with custom designs for every celebration.</p>

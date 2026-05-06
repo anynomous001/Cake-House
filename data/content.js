@@ -155,14 +155,37 @@ export const testimonials = [
 ];
 
 export const galleryCards = [
-  { title: "Floral Elegance", image: "/images/gallery-floral.png", className: "gallery-card-large" },
-  { title: "Party Chocolate", image: "/images/gallery-choco-party.png" },
-  { title: "Minimal Blue", image: "/images/gallery-blue-birthday.png" },
-  { title: "Engagement Cake", image: "/images/gallery-engagement.png", className: "gallery-card-wide" },
-  { title: "Oreo Drip", image: "/images/gallery-oreo.png" },
-  { title: "Anniversary Cake", image: "/images/gallery-bengali-anniversary.png" },
-  { title: "Blue Floral", image: "/images/gallery-blue-flowers.png" },
-  { title: "Classic Chocolate", image: "/images/gallery-classic-choco.png" }
+  { title: "Floral Elegance",    image: "/images/gallery-floral.png",            className: "gallery-card-large" },
+  { title: "Party Chocolate",    image: "/images/gallery-choco-party.png" },
+  { title: "Minimal Blue",       image: "/images/gallery-blue-birthday.png" },
+  { title: "Engagement Cake",    image: "/images/gallery-engagement.png",        className: "gallery-card-wide" },
+  { title: "Oreo Drip",          image: "/images/gallery-oreo.png" },
+  { title: "Anniversary Cake",   image: "/images/gallery-bengali-anniversary.png" },
+  { title: "Blue Floral",        image: "/images/gallery-blue-flowers.png" },
+  { title: "Classic Chocolate",  image: "/images/gallery-classic-choco.png" }
+];
+
+export const extendedGalleryCards = [
+  { title: "Gender Reveal Cake",         image: "/images/gallery-gender-reveal.png",       className: "gallery-card-large" },
+  { title: "Heart Anniversary Cake",     image: "/images/gallery-heart-anniversary.png" },
+  { title: "Pink Choco Drip",            image: "/images/gallery-pink-choco-drip.png" },
+  { title: "Engagement Rose Cake",       image: "/images/gallery-engagement-rose.png",     className: "gallery-card-wide" },
+  { title: "Red Heart Velvet",           image: "/images/gallery-red-heart-velvet.png" },
+  { title: "Ombre Birthday Cake",        image: "/images/gallery-ombre-birthday.png" },
+  { title: "Tiered Choco Drip",          image: "/images/gallery-tiered-choco-drip.png",   className: "gallery-card-large" },
+  { title: "Cartoon Couple Cake",        image: "/images/gallery-cartoon-couple.png" },
+  { title: "Choco Truffle Wafer",        image: "/images/gallery-choco-truffle-wafer.png" },
+  { title: "Rainbow Doll Birthday",      image: "/images/gallery-rainbow-doll.png",        className: "gallery-card-wide" },
+  { title: "Floral Birthday Cake",       image: "/images/gallery-floral-birthday.png" },
+  { title: "Baby Shower Tier Cake",      image: "/images/gallery-baby-shower-tier.png" },
+  { title: "Blue Floral Drip",           image: "/images/gallery-blue-floral-drip.png",    className: "gallery-card-large" },
+  { title: "Oreo Chocolate Cake",        image: "/images/gallery-oreo-choco.png" },
+  { title: "Bengali Wedding Anniversary", image: "/images/gallery-bengali-wedding.png" },
+  { title: "Couple Anniversary Cake",    image: "/images/gallery-couple-anniversary.png",  className: "gallery-card-wide" },
+  { title: "Pink Rosette Cake",          image: "/images/gallery-pink-rosette.png" },
+  { title: "It's A Boy Cake",            image: "/images/gallery-its-a-boy.png" },
+  { title: "Teacher's Day Cake",         image: "/images/gallery-teachers-day.png" },
+  { title: "Loaded Choco Birthday",      image: "/images/gallery-loaded-choco-birthday.png", className: "gallery-card-wide" },
 ];
 
 export const deliveryCards = [
