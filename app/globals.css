@@ -29,6 +29,7 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
 
 body {
@@ -37,6 +38,7 @@ body {
   color: var(--text);
   font-family: var(--font-body, Inter, "Avenir Next", "Segoe UI", sans-serif);
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
 }
 
 body::before {
@@ -2148,6 +2150,11 @@ img {
     grid-template-columns: 1fr;
   }
 
+  .gallery-section .section-heading {
+    text-align: center;
+    align-items: center;
+  }
+
   .gallery-grid {
     grid-template-columns: repeat(2, 1fr);
   }
@@ -2178,6 +2185,7 @@ img {
 
   .gallery-page-hero {
     padding: 96px 0 40px;
+    text-align: center;
   }
 
   .gallery-page-hero h1 {
@@ -2186,6 +2194,7 @@ img {
 
   .gallery-page-hero p {
     font-size: 0.9rem;
+    margin-inline: auto;
   }
 
   .gallery-page-grid-section {
