@@ -297,14 +297,14 @@ img {
 .hero-image {
   object-fit: cover;
   object-position: center 34%;
-  opacity: 0.62;
-  filter: saturate(0.8) brightness(0.72) contrast(1.05);
+  opacity: 0.85;
+  filter: saturate(0.9) brightness(0.9) contrast(1.05);
 }
 
 .hero-overlay {
   background:
-    linear-gradient(180deg, rgba(8, 7, 10, 0.5) 0%, rgba(8, 7, 10, 0.6) 32%, rgba(8, 7, 10, 0.92) 100%),
-    linear-gradient(90deg, rgba(10, 8, 8, 0.9) 0%, rgba(20, 13, 10, 0.78) 34%, rgba(20, 13, 10, 0.3) 62%, rgba(9, 9, 11, 0.7) 100%),
+    linear-gradient(180deg, rgba(8, 7, 10, 0.2) 0%, rgba(8, 7, 10, 0.35) 32%, rgba(8, 7, 10, 0.8) 100%),
+    linear-gradient(90deg, rgba(10, 8, 8, 0.6) 0%, rgba(20, 13, 10, 0.5) 34%, rgba(20, 13, 10, 0.1) 62%, rgba(9, 9, 11, 0.4) 100%),
     radial-gradient(circle at 18% 38%, rgba(201, 124, 49, 0.18), transparent 28%);
 }
 
