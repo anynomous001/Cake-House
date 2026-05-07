@@ -24,7 +24,7 @@ const dancing = Dancing_Script({
 });
 
 export const metadata = {
-  metadataBase: new URL("https://cake-house-tau.vercel.app"),
+  metadataBase: new URL("https://cake-house-gamma.vercel.app"),
   title: "Tota Cake House | Fresh Homemade Cakes in Maslandapur",
   description:
     "Order fresh homemade custom cakes in Maslandapur and Barasat. Birthdays, anniversaries, baby showers — egg and eggless options starting from Rs. 289.",
@@ -32,7 +32,7 @@ export const metadata = {
     title: "Tota Cake House | Fresh Homemade Cakes in Maslandapur",
     description:
       "Order fresh homemade custom cakes in Maslandapur and Barasat. Birthdays, anniversaries, baby showers — egg and eggless options starting from Rs. 289.",
-    url: "https://cake-house-tau.vercel.app",
+    url: "https://cake-house-gamma.vercel.app",
     siteName: "Tota Cake House",
     images: [
       {
