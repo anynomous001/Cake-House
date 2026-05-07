@@ -36,7 +36,7 @@ export const metadata = {
     siteName: "Tota Cake House",
     images: [
       {
-        url: "/images/hero-poster.png",
+        url: "/images/og-image.jpg",
         width: 1200,
         height: 630,
         alt: "Tota Cake House — Fresh Homemade Cakes",
@@ -50,7 +50,7 @@ export const metadata = {
     title: "Tota Cake House | Fresh Homemade Cakes in Maslandapur",
     description:
       "Order fresh homemade custom cakes in Maslandapur and Barasat. Birthdays, anniversaries, baby showers — egg and eggless options starting from Rs. 289.",
-    images: ["/images/hero-poster.png"],
+    images: ["/images/og-image.jpg"],
   },
 };
 
